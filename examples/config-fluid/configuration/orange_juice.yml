@@ -1,0 +1,98 @@
+# 流体
+nyana-fluid:fluids:
+  # 橙汁(默认贴图: 水 + 颜色染色)
+  example_config:orange_juice:
+    # 显示名
+    display_name: "<#FFA500>橙汁"
+    # 颜色
+    color: "#FFA500"
+    # 密度
+    density: 1050
+    # 粘度
+    viscosity: 1100
+    # 温度(K)
+    temperature: 285
+    # 稀有度
+    # (common, uncommon, rare, epic)
+    rarity: "common"
+    # 图标物品(供其他插件用)
+    display_item: "example_config:orange_juice_bottle"
+    # 声音
+    sounds:
+      # 装入容器
+      fill: "minecraft:item.bottle.fill"
+      # 倒出容器
+      empty: "minecraft:item.bottle.empty"
+    # 标签
+    tags:
+      # 可饮用
+      - "example_config:drinkable"
+    # 桶
+    bucket: "example_config:orange_juice_bucket"
+    # 瓶子
+    bottle: "example_config:orange_juice_bottle"
+
+# 物品
+items:
+  # 橙汁桶
+  example_config:orange_juice_bucket:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "橙汁桶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 1
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "example_config:item/orange_juice_bucket"
+      # 生成模型
+      generation:
+        # 父模型
+        parent: "minecraft:item/generated"
+        # 贴图层
+        textures:
+          # 桶
+          layer0: "minecraft:item/bucket"
+          # 液体
+          layer1: "example_config:item/fluid_bucket_overlay"
+      # 每层染色
+      tints:
+        # 桶不染色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFFFFF"
+        # 液体颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFA500"
+  # 橙汁瓶
+  example_config:orange_juice_bottle:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "橙汁瓶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 16
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "minecraft:item/potion"
+      # 每层染色
+      tints:
+        # 药水颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFA500"

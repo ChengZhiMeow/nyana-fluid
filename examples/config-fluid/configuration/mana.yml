@@ -1,0 +1,84 @@
+# 流体
+nyana-fluid:fluids:
+  # 魔力(显式写出默认贴图, 菜单里换贴图并偏移)
+  example_config:mana:
+    # 显示名
+    display_name: "<gradient:#8A5CFF:#E05CFF>魔力</gradient>"
+    # 颜色
+    color: "#8A5CFF"
+    # 贴图
+    texture: "minecraft:block/water_still"
+    # 按颜色染色
+    tint: true
+    # 发光等级
+    luminance: 10
+    # 稀有度
+    # (common, uncommon, rare, epic)
+    rarity: "epic"
+    # 图标物品(供其他插件用)
+    display_item: "minecraft:amethyst_shard"
+    # 标签
+    tags:
+      # 魔法
+      - "example_config:magical"
+    # 桶
+    bucket: "example_config:mana_bucket"
+    # 菜单液面样式
+    gauges:
+      # 屏幕里的小瓶子
+      example_plugin:tank_bottle:
+        # 被切的贴图
+        texture: "example_config:gui/mana_bottle"
+        # 可画出格子
+        oversized_in_gui: true
+        # 显示变换
+        display:
+          # 菜单里
+          gui:
+            # 旋转(角度)
+            rotation: [ 0, 0, -12 ]
+            # 平移(像素)
+            translation: [ 0, 1, 0 ]
+            # 缩放
+            scale: [ 1.1, 1.1, 1 ]
+
+# 物品
+items:
+  # 魔力桶
+  example_config:mana_bucket:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "魔力桶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 1
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "example_config:item/mana_bucket"
+      # 生成模型
+      generation:
+        # 父模型
+        parent: "minecraft:item/generated"
+        # 贴图层
+        textures:
+          # 桶
+          layer0: "minecraft:item/bucket"
+          # 液体
+          layer1: "example_config:item/fluid_bucket_overlay"
+      # 每层染色
+      tints:
+        # 桶不染色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFFFFF"
+        # 液体颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#8A5CFF"

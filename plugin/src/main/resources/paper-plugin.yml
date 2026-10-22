@@ -1,0 +1,15 @@
+name: NyanaFluid
+version: '${version}'
+main: net.nyana.fluid.plugin.Main
+api-version: '1.21'
+load: STARTUP
+folia-supported: true
+authors:
+  - ChengZhiMeow
+
+dependencies:
+  server:
+    CraftEngine:
+      load: BEFORE
+      required: true
+      join-classpath: true

@@ -1,0 +1,11 @@
+categories:
+  example_plugin:examples:
+    priority: 100
+    name: "<!i><gold>nyana-fluid · 插件提供的示例"
+    icon: example_plugin:fluid_tank
+    list:
+      - example_plugin:fluid_tank
+      - example_plugin:mixed_tank
+      - example_plugin:hot_tank
+      - example_plugin:tall_tank
+      - example_plugin:honey_bucket

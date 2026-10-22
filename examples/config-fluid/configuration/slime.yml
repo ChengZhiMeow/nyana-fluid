@@ -1,0 +1,74 @@
+# 流体
+nyana-fluid:fluids:
+  # 史莱姆液(自己的彩色贴图, 不染色)
+  example_config:slime:
+    # 显示名
+    display_name: "<#7BD45A>史莱姆液"
+    # 颜色
+    color: "#7BD45A"
+    # 贴图
+    texture: "example_config:block/slime_still"
+    # 按颜色染色
+    tint: false
+    # 密度
+    density: 1500
+    # 粘度
+    viscosity: 8000
+    # 稀有度
+    # (common, uncommon, rare, epic)
+    rarity: "uncommon"
+    # 图标物品(供其他插件用)
+    display_item: "minecraft:slime_ball"
+    # 声音
+    sounds:
+      # 装入容器
+      fill: "minecraft:block.slime_block.break"
+      # 倒出容器
+      empty: "minecraft:block.slime_block.place"
+    # 标签
+    tags:
+      # 黏稠
+      - "example_config:sticky"
+    # 桶
+    bucket: "example_config:slime_bucket"
+
+# 物品
+items:
+  # 史莱姆液桶
+  example_config:slime_bucket:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "史莱姆液桶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 1
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "example_config:item/slime_bucket"
+      # 生成模型
+      generation:
+        # 父模型
+        parent: "minecraft:item/generated"
+        # 贴图层
+        textures:
+          # 桶
+          layer0: "minecraft:item/bucket"
+          # 液体
+          layer1: "example_config:item/fluid_bucket_overlay"
+      # 每层染色
+      tints:
+        # 桶不染色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFFFFF"
+        # 液体颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#7BD45A"

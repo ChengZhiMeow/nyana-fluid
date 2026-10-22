@@ -1,0 +1,246 @@
+{
+  "parent": "minecraft:block/block",
+  "credit": "Based on the fluid tank by CyanideX",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "ports_led": "example_plugin:block/fluid_tank/ports_copper",
+    "tank_frame": "example_plugin:block/fluid_tank/frame",
+    "tank_frame_top": "example_plugin:block/fluid_tank/top",
+    "glass": "example_plugin:block/fluid_tank/glass",
+    "particle": "#glass",
+    "frame_upper": "example_plugin:block/fluid_tank/frame_upper"
+  },
+  "elements": [
+    {
+      "name": "frame_upper",
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        16,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "east": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "south": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "west": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "up": {
+          "uv": [
+            14,
+            14,
+            2,
+            2
+          ],
+          "texture": "#tank_frame_top",
+          "cullface": "up"
+        }
+      }
+    },
+    {
+      "name": "rib_x",
+      "from": [
+        12.02,
+        14.02,
+        15
+      ],
+      "to": [
+        3.98,
+        0,
+        1
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "west": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "down": {
+          "uv": [
+            1,
+            12,
+            15,
+            4
+          ],
+          "rotation": 90,
+          "texture": "#tank_frame_top"
+        }
+      }
+    },
+    {
+      "name": "rib_z",
+      "from": [
+        15,
+        14.02,
+        12.02
+      ],
+      "to": [
+        1,
+        0,
+        3.98
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "south": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "down": {
+          "uv": [
+            1,
+            14,
+            15,
+            6
+          ],
+          "texture": "#tank_frame"
+        }
+      }
+    },
+    {
+      "name": "glass_upper",
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        14,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "east": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "south": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "west": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        }
+      }
+    },
+    {
+      "name": "port_top",
+      "from": [
+        3,
+        14.02,
+        3
+      ],
+      "to": [
+        13,
+        16,
+        13
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "texture": "#ports_led",
+          "cullface": "up"
+        },
+        "down": {
+          "uv": [
+            5,
+            0,
+            0,
+            5
+          ],
+          "texture": "#ports_led"
+        }
+      }
+    }
+  ]
+}

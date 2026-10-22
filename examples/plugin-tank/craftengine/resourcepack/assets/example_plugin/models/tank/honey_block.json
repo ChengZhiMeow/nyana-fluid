@@ -1,0 +1,7 @@
+{
+  "parent": "nyana-fluid:tank_fluid_shape/16",
+  "textures": {
+    "fluid": "minecraft:block/honey_block_side",
+    "particle": "minecraft:block/honey_block_side"
+  }
+}

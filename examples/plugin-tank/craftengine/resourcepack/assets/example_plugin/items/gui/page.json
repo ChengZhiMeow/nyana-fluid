@@ -1,0 +1,397 @@
+{
+  "model": {
+    "type": "minecraft:select",
+    "property": "minecraft:custom_model_data",
+    "index": 0,
+    "cases": [
+      {
+        "when": "1/1",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_1"
+        }
+      },
+      {
+        "when": "1/2",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_2"
+        }
+      },
+      {
+        "when": "2/2",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_2"
+        }
+      },
+      {
+        "when": "1/3",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_3"
+        }
+      },
+      {
+        "when": "2/3",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_3"
+        }
+      },
+      {
+        "when": "3/3",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_3"
+        }
+      },
+      {
+        "when": "1/4",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_4"
+        }
+      },
+      {
+        "when": "2/4",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_4"
+        }
+      },
+      {
+        "when": "3/4",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_4"
+        }
+      },
+      {
+        "when": "4/4",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_4"
+        }
+      },
+      {
+        "when": "1/5",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_5"
+        }
+      },
+      {
+        "when": "2/5",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_5"
+        }
+      },
+      {
+        "when": "3/5",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_5"
+        }
+      },
+      {
+        "when": "4/5",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_5"
+        }
+      },
+      {
+        "when": "5/5",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_5_5"
+        }
+      },
+      {
+        "when": "1/6",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_6"
+        }
+      },
+      {
+        "when": "2/6",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_6"
+        }
+      },
+      {
+        "when": "3/6",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_6"
+        }
+      },
+      {
+        "when": "4/6",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_6"
+        }
+      },
+      {
+        "when": "5/6",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_5_6"
+        }
+      },
+      {
+        "when": "6/6",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_6_6"
+        }
+      },
+      {
+        "when": "1/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_7"
+        }
+      },
+      {
+        "when": "2/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_7"
+        }
+      },
+      {
+        "when": "3/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_7"
+        }
+      },
+      {
+        "when": "4/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_7"
+        }
+      },
+      {
+        "when": "5/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_5_7"
+        }
+      },
+      {
+        "when": "6/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_6_7"
+        }
+      },
+      {
+        "when": "7/7",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_7_7"
+        }
+      },
+      {
+        "when": "1/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_8"
+        }
+      },
+      {
+        "when": "2/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_8"
+        }
+      },
+      {
+        "when": "3/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_8"
+        }
+      },
+      {
+        "when": "4/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_8"
+        }
+      },
+      {
+        "when": "5/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_5_8"
+        }
+      },
+      {
+        "when": "6/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_6_8"
+        }
+      },
+      {
+        "when": "7/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_7_8"
+        }
+      },
+      {
+        "when": "8/8",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_8_8"
+        }
+      },
+      {
+        "when": "1/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_9"
+        }
+      },
+      {
+        "when": "2/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_9"
+        }
+      },
+      {
+        "when": "3/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_9"
+        }
+      },
+      {
+        "when": "4/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_9"
+        }
+      },
+      {
+        "when": "5/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_5_9"
+        }
+      },
+      {
+        "when": "6/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_6_9"
+        }
+      },
+      {
+        "when": "7/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_7_9"
+        }
+      },
+      {
+        "when": "8/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_8_9"
+        }
+      },
+      {
+        "when": "9/9",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_9_9"
+        }
+      },
+      {
+        "when": "1/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_1_10"
+        }
+      },
+      {
+        "when": "2/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_2_10"
+        }
+      },
+      {
+        "when": "3/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_3_10"
+        }
+      },
+      {
+        "when": "4/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_4_10"
+        }
+      },
+      {
+        "when": "5/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_5_10"
+        }
+      },
+      {
+        "when": "6/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_6_10"
+        }
+      },
+      {
+        "when": "7/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_7_10"
+        }
+      },
+      {
+        "when": "8/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_8_10"
+        }
+      },
+      {
+        "when": "9/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_9_10"
+        }
+      },
+      {
+        "when": "10/10",
+        "model": {
+          "type": "minecraft:model",
+          "model": "example_plugin:gui/page_10_10"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:empty"
+    }
+  }
+}

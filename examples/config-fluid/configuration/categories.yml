@@ -1,0 +1,12 @@
+categories:
+  example_config:examples:
+    priority: 101
+    name: "<!i><aqua>nyana-fluid · 配置提供的示例"
+    icon: example_config:orange_juice_bucket
+    list:
+      - example_config:orange_juice_bucket
+      - example_config:orange_juice_bottle
+      - example_config:slime_bucket
+      - example_config:molten_gold_bucket
+      - example_config:mana_bucket
+      - example_config:steam_bottle

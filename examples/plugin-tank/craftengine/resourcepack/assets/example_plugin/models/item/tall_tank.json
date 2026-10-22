@@ -1,0 +1,578 @@
+{
+  "parent": "minecraft:block/block",
+  "credit": "Based on the fluid tank by CyanideX",
+  "textures": {
+    "ports_led": "example_plugin:block/fluid_tank/ports_copper",
+    "tank_frame": "example_plugin:block/fluid_tank/frame",
+    "tank_frame_top": "example_plugin:block/fluid_tank/top",
+    "glass": "example_plugin:block/fluid_tank/glass",
+    "particle": "#glass",
+    "frame_lower": "example_plugin:block/fluid_tank/frame_lower",
+    "frame_upper": "example_plugin:block/fluid_tank/frame_upper"
+  },
+  "elements": [
+    {
+      "name": "frame_lower",
+      "from": [
+        2,
+        0,
+        2
+      ],
+      "to": [
+        14,
+        16,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_lower"
+        },
+        "east": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_lower"
+        },
+        "south": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_lower"
+        },
+        "west": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_lower"
+        },
+        "down": {
+          "uv": [
+            14,
+            14,
+            2,
+            2
+          ],
+          "texture": "#tank_frame_top"
+        }
+      }
+    },
+    {
+      "name": "rib_x",
+      "from": [
+        12.02,
+        16,
+        15
+      ],
+      "to": [
+        3.98,
+        1.98,
+        1
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "west": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "up": {
+          "uv": [
+            1,
+            12,
+            15,
+            4
+          ],
+          "rotation": 90,
+          "texture": "#tank_frame_top"
+        }
+      }
+    },
+    {
+      "name": "rib_z",
+      "from": [
+        15,
+        16,
+        12.02
+      ],
+      "to": [
+        1,
+        1.98,
+        3.98
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "south": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "up": {
+          "uv": [
+            1,
+            14,
+            15,
+            6
+          ],
+          "rotation": 180,
+          "texture": "#tank_frame"
+        }
+      }
+    },
+    {
+      "name": "glass_lower",
+      "from": [
+        2,
+        2,
+        2
+      ],
+      "to": [
+        14,
+        16,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            0,
+            14,
+            14
+          ],
+          "texture": "#glass"
+        },
+        "east": {
+          "uv": [
+            2,
+            0,
+            14,
+            14
+          ],
+          "texture": "#glass"
+        },
+        "south": {
+          "uv": [
+            2,
+            0,
+            14,
+            14
+          ],
+          "texture": "#glass"
+        },
+        "west": {
+          "uv": [
+            2,
+            0,
+            14,
+            14
+          ],
+          "texture": "#glass"
+        }
+      }
+    },
+    {
+      "name": "port_bottom",
+      "from": [
+        3,
+        0,
+        3
+      ],
+      "to": [
+        13,
+        1.98,
+        13
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "texture": "#ports_led"
+        },
+        "down": {
+          "uv": [
+            5,
+            0,
+            0,
+            5
+          ],
+          "texture": "#ports_led"
+        }
+      }
+    },
+    {
+      "name": "frame_upper",
+      "from": [
+        2,
+        16,
+        2
+      ],
+      "to": [
+        14,
+        32,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "east": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "south": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "west": {
+          "uv": [
+            14,
+            16,
+            2,
+            0
+          ],
+          "texture": "#frame_upper"
+        },
+        "up": {
+          "uv": [
+            14,
+            14,
+            2,
+            2
+          ],
+          "texture": "#tank_frame_top"
+        }
+      }
+    },
+    {
+      "name": "rib_x",
+      "from": [
+        12.02,
+        30.02,
+        15
+      ],
+      "to": [
+        3.98,
+        16,
+        1
+      ],
+      "faces": {
+        "east": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "west": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "down": {
+          "uv": [
+            1,
+            12,
+            15,
+            4
+          ],
+          "rotation": 90,
+          "texture": "#tank_frame_top"
+        }
+      }
+    },
+    {
+      "name": "rib_z",
+      "from": [
+        15,
+        30.02,
+        12.02
+      ],
+      "to": [
+        1,
+        16,
+        3.98
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "south": {
+          "uv": [
+            15,
+            2,
+            1,
+            14
+          ],
+          "texture": "#tank_frame"
+        },
+        "down": {
+          "uv": [
+            1,
+            14,
+            15,
+            6
+          ],
+          "texture": "#tank_frame"
+        }
+      }
+    },
+    {
+      "name": "glass_upper",
+      "from": [
+        2,
+        16,
+        2
+      ],
+      "to": [
+        14,
+        30,
+        14
+      ],
+      "faces": {
+        "north": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "east": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "south": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        },
+        "west": {
+          "uv": [
+            2,
+            2,
+            14,
+            16
+          ],
+          "texture": "#glass"
+        }
+      }
+    },
+    {
+      "name": "port_top",
+      "from": [
+        3,
+        30.02,
+        3
+      ],
+      "to": [
+        13,
+        32,
+        13
+      ],
+      "faces": {
+        "up": {
+          "uv": [
+            5,
+            5,
+            0,
+            0
+          ],
+          "texture": "#ports_led"
+        },
+        "down": {
+          "uv": [
+            5,
+            0,
+            0,
+            5
+          ],
+          "texture": "#ports_led"
+        }
+      }
+    }
+  ],
+  "display": {
+    "gui": {
+      "rotation": [
+        30,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        -3.2,
+        0
+      ],
+      "scale": [
+        0.4,
+        0.4,
+        0.4
+      ]
+    },
+    "ground": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        1,
+        0
+      ],
+      "scale": [
+        0.2,
+        0.2,
+        0.2
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "translation": [
+        0,
+        -4,
+        0
+      ],
+      "scale": [
+        0.45,
+        0.45,
+        0.45
+      ]
+    },
+    "thirdperson_righthand": {
+      "rotation": [
+        75,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "firstperson_righthand": {
+      "rotation": [
+        0,
+        45,
+        0
+      ],
+      "translation": [
+        0,
+        -2,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        0,
+        225,
+        0
+      ],
+      "translation": [
+        0,
+        -2,
+        0
+      ],
+      "scale": [
+        0.3,
+        0.3,
+        0.3
+      ]
+    }
+  }
+}

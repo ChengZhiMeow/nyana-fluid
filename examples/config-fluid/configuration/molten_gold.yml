@@ -1,0 +1,113 @@
+# 流体
+nyana-fluid:fluids:
+  # 熔融黄金(灰度贴图 + 颜色染色)
+  example_config:molten_gold:
+    # 显示名
+    display_name: "<#FFC83D>熔融黄金"
+    # 颜色
+    color: "#FFC83D"
+    # 贴图
+    texture: "example_config:block/molten_metal"
+    # 按颜色染色
+    tint: true
+    # 发光等级
+    luminance: 12
+    # 温度(K)
+    temperature: 1337
+    # 密度
+    density: 3000
+    # 粘度
+    viscosity: 6000
+    # 稀有度
+    # (common, uncommon, rare, epic)
+    rarity: "rare"
+    # 图标物品(供其他插件用)
+    display_item: "minecraft:gold_ingot"
+    # 声音
+    sounds:
+      # 装入容器
+      fill: "minecraft:item.bucket.fill_lava"
+      # 倒出容器
+      empty: "minecraft:item.bucket.empty_lava"
+    # 桶
+    bucket: "example_config:molten_gold_bucket"
+    # 菜单液面样式
+    gauges:
+      # 储罐横向液面条
+      example_plugin:tank_meter:
+        # 类型
+        # (split, select)
+        type: "select"
+        # 档数
+        amount: 4
+        # 每一档
+        items:
+          # 第 1 档
+          1:
+            # 类型
+            # (texture, model, item)
+            type: "item"
+            # 物品
+            id: "minecraft:gold_nugget"
+          # 第 2 档
+          2:
+            # 类型
+            # (texture, model, item)
+            type: "item"
+            # 物品
+            id: "minecraft:raw_gold"
+          # 第 3 档
+          3:
+            # 类型
+            # (texture, model, item)
+            type: "item"
+            # 物品
+            id: "minecraft:gold_ingot"
+          # 满
+          4:
+            # 类型
+            # (texture, model, item)
+            type: "item"
+            # 物品
+            id: "minecraft:gold_block"
+
+# 物品
+items:
+  # 熔融黄金桶
+  example_config:molten_gold_bucket:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "熔融黄金桶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 1
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "example_config:item/molten_gold_bucket"
+      # 生成模型
+      generation:
+        # 父模型
+        parent: "minecraft:item/generated"
+        # 贴图层
+        textures:
+          # 桶
+          layer0: "minecraft:item/bucket"
+          # 液体
+          layer1: "example_config:item/fluid_bucket_overlay"
+      # 每层染色
+      tints:
+        # 桶不染色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFFFFF"
+        # 液体颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFC83D"

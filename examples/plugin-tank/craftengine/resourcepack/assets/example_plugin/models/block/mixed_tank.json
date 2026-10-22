@@ -1,0 +1,6 @@
+{
+  "parent": "example_plugin:block/fluid_tank/base",
+  "textures": {
+    "ports_led": "example_plugin:block/fluid_tank/ports_copper"
+  }
+}

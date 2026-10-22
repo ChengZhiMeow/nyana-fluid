@@ -1,0 +1,45 @@
+# 流体
+nyana-fluid:fluids:
+  # 蒸汽(气体, 只有瓶子, 没有图标物品)
+  example_config:steam:
+    # 显示名
+    display_name: "<#E6EEF0>蒸汽"
+    # 颜色
+    color: "#E6EEF0"
+    # 是否是气体
+    gaseous: true
+    # 密度(气体为负)
+    density: -500
+    # 粘度
+    viscosity: 200
+    # 温度(K)
+    temperature: 400
+    # 瓶子
+    bottle: "example_config:steam_bottle"
+
+# 物品
+items:
+  # 蒸汽瓶
+  example_config:steam_bottle:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "蒸汽瓶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 16
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "minecraft:item/potion"
+      # 每层染色
+      tints:
+        # 药水颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#E6EEF0"

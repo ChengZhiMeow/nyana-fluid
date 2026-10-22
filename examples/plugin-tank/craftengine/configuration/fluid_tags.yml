@@ -1,0 +1,5 @@
+nyana-fluid:fluid_tags:
+  example_plugin:hot:
+    - "minecraft:lava"
+    - "example_config:molten_gold"
+    - "example_config:steam"

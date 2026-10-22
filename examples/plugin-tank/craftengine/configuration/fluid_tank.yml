@@ -1,0 +1,480 @@
+# 物品
+items:
+  # 流体储罐
+  example_plugin:fluid_tank:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "流体储罐"
+    # 物品模型
+    model: "example_plugin:block/fluid_tank"
+    # 菜单里超出格子
+    oversized_in_gui: false
+    # 物品行为
+    behavior:
+      # 行为类型
+      type: "block_item"
+      # 放置的方块
+      block:
+        # 方块行为
+        behaviors:
+          # 单流体储罐
+          - type: "example_plugin:fluid_tank"
+            # 菜单标题
+            title: "流体储罐"
+            # 容量(B/mB)
+            capacity: "8B"
+            # 槽数
+            slots: 1
+            # 各面能否存取
+            sides:
+              # 所有面
+              # (none, input, output, both)
+              all: "both"
+            # 破坏保留流体
+            keep_on_break: true
+            # 存档键
+            data_key: "example_plugin:fluid_tank"
+            # 液体展示实体
+            renderer:
+              # 液体盒子(像素)
+              bounds: [ 2.16, 1.98, 2.16, 13.84, 14.02, 13.84 ]
+              # 液面档数
+              levels: 16
+              # 动画时长(刻)
+              transition_ticks: 5
+              # 动画延迟(刻)
+              transition_delay_ticks: 2
+              # 可视距离倍率
+              view_range: 1.0
+              # 亮度(-1 不改)
+              brightness: -1
+        # 掉落
+        loot:
+          # 掉落池
+          pools:
+            # 抽取次数
+            - rolls: 1
+              # 掉落项
+              entries:
+                # 掉落类型
+                - type: "item"
+                  # 掉落物品
+                  item: "example_plugin:fluid_tank"
+                  # 掉落函数
+                  functions:
+                    # 保留罐内流体
+                    - type: "nyana-fluid:preserve_fluid"
+        # 方块设置
+        settings:
+          # 硬度
+          hardness: 1.0
+          # 爆炸抗性
+          resistance: 1.0
+          # 声音
+          sounds:
+            # 破坏
+            break: "minecraft:block.iron.break"
+            # 踩踏
+            step: "minecraft:block.iron.step"
+            # 放置
+            place: "minecraft:block.iron.place"
+            # 敲击
+            hit: "minecraft:block.iron.hit"
+            # 摔落
+            fall: "minecraft:block.iron.fall"
+        # 方块状态
+        state:
+          # 自动分配状态
+          auto_state:
+            # 状态类型
+            # (non_tintable_leaves, tintable_leaves, solid)
+            type: "non_tintable_leaves"
+            # 状态 id
+            id: "fluid_tank"
+          # 方块模型
+          model:
+            # 模型路径
+            path: "example_plugin:block/fluid_tank"
+
+  # 混合储罐
+  example_plugin:mixed_tank:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "混合储罐"
+    # 物品模型
+    model: "example_plugin:block/mixed_tank"
+    # 菜单里超出格子
+    oversized_in_gui: false
+    # 物品行为
+    behavior:
+      # 行为类型
+      type: "block_item"
+      # 放置的方块
+      block:
+        # 方块行为
+        behaviors:
+          # 多流体储罐
+          - type: "example_plugin:mixed_tank"
+            # 菜单标题
+            title: "混合储罐"
+            # 容量(mB)
+            capacity: 16000
+            # 槽数
+            slots: 4
+            # 各槽共用容量
+            shared_capacity: true
+            # 各面能否存取
+            sides:
+              # 四个侧面
+              # (none, input, output, both)
+              horizontal: "both"
+              # 顶面
+              # (none, input, output, both)
+              up: "input"
+              # 底面
+              # (none, input, output, both)
+              down: "output"
+            # 液体展示实体
+            renderer:
+              # 液体盒子(像素)
+              bounds: [ 2.16, 1.98, 2.16, 13.84, 14.02, 13.84 ]
+              # 液面档数
+              levels: 16
+              # 动画时长(刻)
+              transition_ticks: 8
+              # 动画延迟(刻)
+              transition_delay_ticks: 2
+              # 单独设置流体
+              fluids:
+                # 蜂蜜
+                example_plugin:honey:
+                  # 物品模型
+                  model: "example_plugin:tank/honey_block"
+        # 掉落
+        loot:
+          # 掉落池
+          pools:
+            # 抽取次数
+            - rolls: 1
+              # 掉落项
+              entries:
+                # 掉落类型
+                - type: "item"
+                  # 掉落物品
+                  item: "example_plugin:mixed_tank"
+                  # 掉落函数
+                  functions:
+                    # 保留罐内流体
+                    - type: "nyana-fluid:preserve_fluid"
+        # 方块设置
+        settings:
+          # 硬度
+          hardness: 1.0
+          # 爆炸抗性
+          resistance: 1.0
+          # 声音
+          sounds:
+            # 破坏
+            break: "minecraft:block.copper.break"
+            # 踩踏
+            step: "minecraft:block.copper.step"
+            # 放置
+            place: "minecraft:block.copper.place"
+            # 敲击
+            hit: "minecraft:block.copper.hit"
+            # 摔落
+            fall: "minecraft:block.copper.fall"
+        # 方块状态
+        state:
+          # 自动分配状态
+          auto_state:
+            # 状态类型
+            # (non_tintable_leaves, tintable_leaves, solid)
+            type: "non_tintable_leaves"
+            # 状态 id
+            id: "mixed_tank"
+          # 方块模型
+          model:
+            # 模型路径
+            path: "example_plugin:block/mixed_tank"
+
+  # 高温储罐
+  example_plugin:hot_tank:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "高温储罐"
+    # 物品模型
+    model: "example_plugin:block/hot_tank"
+    # 菜单里超出格子
+    oversized_in_gui: false
+    # 物品行为
+    behavior:
+      # 行为类型
+      type: "block_item"
+      # 放置的方块
+      block:
+        # 方块行为
+        behaviors:
+          # 单流体储罐
+          - type: "example_plugin:fluid_tank"
+            # 菜单标题
+            title: "高温储罐"
+            # 容量(B/mB)
+            capacity: "4B"
+            # 槽数
+            slots: 1
+            # 只收这些流体
+            filter: "#example_plugin:hot"
+            # 破坏保留流体
+            keep_on_break: false
+            # 存档键
+            data_key: "example_plugin:hot_tank"
+            # 液体展示实体
+            renderer:
+              # 液体盒子(像素)
+              bounds: [ 2.16, 1.98, 2.16, 13.84, 14.02, 13.84 ]
+              # 液面档数
+              levels: 8
+              # 动画时长(刻)
+              transition_ticks: 10
+              # 动画延迟(刻)
+              transition_delay_ticks: 1
+              # 可视距离倍率
+              view_range: 1.5
+              # 亮度(-1 不改)
+              brightness: -1
+              # 额外平移(方块)
+              translation: [ 0, 0, 0 ]
+              # 额外缩放
+              scale: [ 1, 1, 1 ]
+              # 额外旋转(角度)
+              rotation: [ 0, 0, 0 ]
+              # 单独设置流体
+              fluids:
+                # 岩浆
+                minecraft:lava:
+                  # 亮度
+                  brightness: 15
+        # 掉落
+        loot:
+          # 掉落池
+          pools:
+            # 抽取次数
+            - rolls: 1
+              # 掉落项
+              entries:
+                # 掉落类型
+                - type: "item"
+                  # 掉落物品
+                  item: "example_plugin:hot_tank"
+        # 方块设置
+        settings:
+          # 硬度
+          hardness: 3.0
+          # 爆炸抗性
+          resistance: 6.0
+          # 声音
+          sounds:
+            # 破坏
+            break: "minecraft:block.netherite_block.break"
+            # 踩踏
+            step: "minecraft:block.netherite_block.step"
+            # 放置
+            place: "minecraft:block.netherite_block.place"
+            # 敲击
+            hit: "minecraft:block.netherite_block.hit"
+            # 摔落
+            fall: "minecraft:block.netherite_block.fall"
+        # 方块状态
+        state:
+          # 自动分配状态
+          auto_state:
+            # 状态类型
+            # (non_tintable_leaves, tintable_leaves, solid)
+            type: "non_tintable_leaves"
+            # 状态 id
+            id: "hot_tank"
+          # 方块模型
+          model:
+            # 模型路径
+            path: "example_plugin:block/hot_tank"
+
+  # 大型混合储罐(两格高, 10 种流体)
+  example_plugin:tall_tank:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "大型混合储罐"
+    # 物品模型
+    model: "example_plugin:item/tall_tank"
+    # 菜单里超出格子
+    oversized_in_gui: false
+    # 物品行为
+    behavior:
+      # 行为类型(放两格)
+      type: "double_high_block_item"
+      # 放置的方块
+      block:
+        # 方块行为
+        behaviors:
+          # 两格高方块
+          - type: "double_high_block"
+          # 多流体储罐
+          - type: "example_plugin:mixed_tank"
+            # 菜单标题
+            title: "大型混合储罐"
+            # 容量(B/mB)
+            capacity: "40B"
+            # 槽数
+            slots: 10
+            # 各槽共用容量
+            shared_capacity: true
+            # 液体展示实体
+            renderer:
+              # 液体盒子(像素, 跨两格)
+              bounds: [ 2.16, 1.98, 2.16, 13.84, 30.02, 13.84 ]
+              # 液面档数
+              levels: 16
+              # 动画时长(刻)
+              transition_ticks: 8
+              # 动画延迟(刻)
+              transition_delay_ticks: 2
+        # 掉落
+        loot:
+          # 掉落池
+          pools:
+            # 抽取次数
+            - rolls: 1
+              # 掉落项
+              entries:
+                # 掉落类型
+                - type: "item"
+                  # 掉落物品
+                  item: "example_plugin:tall_tank"
+                  # 掉落条件
+                  conditions:
+                    # 只有下半格掉落
+                    - type: "match_block_property"
+                      # 方块属性
+                      properties:
+                        # 上下半
+                        # (lower, upper)
+                        half: "lower"
+                  # 掉落函数
+                  functions:
+                    # 保留罐内流体
+                    - type: "nyana-fluid:preserve_fluid"
+        # 方块设置
+        settings:
+          # 硬度
+          hardness: 2.0
+          # 爆炸抗性
+          resistance: 3.0
+          # 声音
+          sounds:
+            # 破坏
+            break: "minecraft:block.copper.break"
+            # 踩踏
+            step: "minecraft:block.copper.step"
+            # 放置
+            place: "minecraft:block.copper.place"
+            # 敲击
+            hit: "minecraft:block.copper.hit"
+            # 摔落
+            fall: "minecraft:block.copper.fall"
+        # 方块状态
+        states:
+          # 属性
+          properties:
+            # 上下半
+            half:
+              # 属性类型
+              type: "double_block_half"
+          # 外观
+          appearances:
+            # 下半格
+            lower:
+              # 自动分配状态
+              auto_state:
+                # 状态类型
+                # (non_tintable_leaves, tintable_leaves, solid)
+                type: "non_tintable_leaves"
+                # 状态 id
+                id: "tall_tank_lower"
+              # 方块模型
+              model:
+                # 模型路径
+                path: "example_plugin:block/tall_tank/lower"
+            # 上半格
+            upper:
+              # 自动分配状态
+              auto_state:
+                # 状态类型
+                # (non_tintable_leaves, tintable_leaves, solid)
+                type: "non_tintable_leaves"
+                # 状态 id
+                id: "tall_tank_upper"
+              # 方块模型
+              model:
+                # 模型路径
+                path: "example_plugin:block/tall_tank/upper"
+          # 每个状态用哪个外观
+          variants:
+            # 下半格
+            "half=lower":
+              # 外观
+              appearance: "lower"
+            # 上半格
+            "half=upper":
+              # 外观
+              appearance: "upper"
+
+  # 蜂蜜桶
+  example_plugin:honey_bucket:
+    # 原版材质
+    material: "paper"
+    # 物品数据
+    data:
+      # 物品名
+      item_name: "蜂蜜桶"
+      # 原版组件
+      components:
+        # 最大堆叠
+        minecraft:max_stack_size: 1
+    # 物品模型
+    model:
+      # 模型类型
+      type: "minecraft:model"
+      # 模型路径
+      path: "example_plugin:item/honey_bucket"
+      # 生成模型
+      generation:
+        # 父模型
+        parent: "minecraft:item/generated"
+        # 贴图层
+        textures:
+          # 桶
+          layer0: "minecraft:item/bucket"
+          # 液体
+          layer1: "example_plugin:item/fluid_bucket_overlay"
+      # 每层染色
+      tints:
+        # 桶不染色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFFFFF"
+        # 液体颜色
+        - type: "minecraft:constant"
+          # 颜色
+          value: "#FFB300"

@@ -1,0 +1,120 @@
+# 图片(菜单背景)
+images:
+  # 流体储罐背景
+  example_plugin:gui_tank_single:
+    # 贴图
+    file: "example_plugin:gui/tank_single"
+    # 高度(像素)
+    height: 168
+    # 上移(像素)
+    ascent: 13
+    # 字体
+    font: "example_plugin:gui"
+  # 混合储罐背景
+  example_plugin:gui_tank_mixed:
+    # 贴图
+    file: "example_plugin:gui/tank_mixed"
+    # 高度(像素)
+    height: 168
+    # 上移(像素)
+    ascent: 13
+    # 字体
+    font: "example_plugin:gui"
+
+# 菜单液面默认样式
+nyana-fluid:gauges:
+  # 屏幕里的小瓶子
+  example_plugin:tank_bottle:
+    # 类型
+    # (split, select)
+    type: "split"
+    # 被切的贴图
+    texture: "example_plugin:gui/tank_gauge_fill"
+    # 切的方向
+    # (up, down, left, right)
+    direction: "up"
+    # 下层贴图
+    background: "example_plugin:gui/tank_gauge_back"
+    # 上层贴图
+    overlay: "example_plugin:gui/tank_gauge_frame"
+    # 按流体颜色染色
+    tint: true
+    # 父模型
+    parent: "minecraft:item/generated"
+    # 代码注册的流体
+    fluids:
+      # 蜂蜜
+      example_plugin:honey:
+        # 被切的贴图
+        texture: "example_plugin:gui/tank_gauge_honey"
+        # 按流体颜色染色
+        tint: false
+
+  # 横向液面条
+  example_plugin:tank_meter:
+    # 类型
+    # (split, select)
+    type: "split"
+    # 被切的贴图
+    texture: "example_plugin:gui/tank_meter_fill"
+    # 切成几档
+    amount: 6
+    # 切的方向
+    # (up, down, left, right)
+    direction: "right"
+    # 下层贴图
+    background: "example_plugin:gui/tank_meter_back"
+    # 代码注册的流体
+    fluids:
+      # 蜂蜜
+      example_plugin:honey:
+        # 类型
+        # (split, select)
+        type: "select"
+        # 档数
+        amount: 4
+        # 按流体颜色染色
+        tint: false
+        # 每一档
+        items:
+          # 第 1 档
+          1:
+            # 类型
+            # (texture, model, item)
+            type: "texture"
+            # 贴图
+            id: "example_plugin:gui/tank_meter_honey_1"
+          # 第 2 档
+          2:
+            # 类型
+            # (texture, model, item)
+            type: "texture"
+            # 贴图
+            id: "example_plugin:gui/tank_meter_honey_2"
+          # 第 3 档
+          3:
+            # 类型
+            # (texture, model, item)
+            type: "texture"
+            # 贴图
+            id: "example_plugin:gui/tank_meter_honey_3"
+          # 满
+          4:
+            # 类型
+            # (texture, model, item)
+            type: "model"
+            # 模型
+            id: "minecraft:item/honey_bottle"
+
+# 菜单叠层液体格
+nyana-fluid:fluid_cells:
+  # 液体格
+  example_plugin:tank_cells:
+    # 默认液体贴图
+    texture: "minecraft:block/water_still"
+  # 带刻度的液体格
+  example_plugin:tank_cells_ticks:
+    # 默认液体贴图
+    texture: "minecraft:block/water_still"
+    # 上层贴图
+    overlay: "example_plugin:gui/tank_cell_ticks"
